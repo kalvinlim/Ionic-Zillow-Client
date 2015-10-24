@@ -1,14 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, $resource) {
-    $scope.result = entry.get(function(data){
-
-  });
-
-  $scope.foo = 'bar';
-
-  var entry = $resource('http://ec2-52-88-245-162.us-west-2.compute.amazonaws.com:8081/mock/api/v1/xmlparse/search.json');
-})
+.controller('DashCtrl', function($scope) {})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
@@ -20,14 +12,9 @@ angular.module('starter.controllers', [])
   //});
 
   $scope.chats = Chats.all();
-
   $scope.remove = function(chat) {
     Chats.remove(chat);
   };
-
-
-
-
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
@@ -39,7 +26,3 @@ angular.module('starter.controllers', [])
     enableFriends: true
   };
 });
-
-
-
-
